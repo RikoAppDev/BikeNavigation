@@ -2,6 +2,7 @@
 <resources>
 
     <style name="Theme.BikeNavigation" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:statusBarColor">@color/yellow_ssnd</item>
+        <item name="android:navigationBarColor">@color/red_ssnd</item>
     </style>
 </resources>
