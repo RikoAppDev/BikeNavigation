@@ -1,6 +1,7 @@
 package dev.riko.bikenavigation.presentation.features.google_maps.composables
 
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.text.KeyboardActions
@@ -25,9 +26,9 @@ fun SearchBar(modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .wrapContentHeight()
-            .padding(22.dp),
-        backgroundColor = Color.White,
+            .padding(top = 22.dp, end = 22.dp)
+            .height(58.dp),
+        backgroundColor = MaterialTheme.colors.background,
         shape = Shapes.large,
         elevation = 8.dp
     ) {
@@ -36,13 +37,13 @@ fun SearchBar(modifier: Modifier = Modifier) {
             label = {
                 Text(
                     text = "Destination place",
-                    color = Color.Black
+                    color = MaterialTheme.colors.onBackground
                 )
             },
             placeholder = {
                 Text(
                     text = "Search here",
-                    color = Color.Black
+                    color = MaterialTheme.colors.onBackground
                 )
             },
             onValueChange = { search = it },
@@ -87,7 +88,7 @@ fun SearchBar(modifier: Modifier = Modifier) {
                 focusedIndicatorColor = Color.Unspecified,
                 unfocusedIndicatorColor = Color.Unspecified,
                 cursorColor = MaterialTheme.colors.secondary,
-                textColor = Color.Black
+                textColor = MaterialTheme.colors.onBackground
             ),
         )
     }
